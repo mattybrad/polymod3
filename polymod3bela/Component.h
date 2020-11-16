@@ -4,6 +4,8 @@
 
 #include <Bela.h>
 #include "Globals.h"
+#include <libraries/ADSR/ADSR.h>
+#include <libraries/Biquad/Biquad.h>
 
 class Component {
 	public:
@@ -18,4 +20,6 @@ class Component {
 	int _id;
 	float _phase = 0.0;
 	float _frequency = 261.6256; // middle C
+	ADSR _envelope; // ADSR envelope
+	Biquad _filter;
 };

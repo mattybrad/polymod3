@@ -52,6 +52,24 @@ void Module::init(int id, int moduleNum) {
 			PatchCable::addCable(_moduleNum, 2, 0, _moduleNum, 3, 0);
 			break;
 		}
+		case ADSR_MODULE: {
+			componentSets[0].init(PASS_THROUGH_COMPONENT); // gate in
+			componentSets[1].init(ADSR_COMPONENT); // envelope
+			componentSets[2].init(PASS_THROUGH_COMPONENT); // cv out
+			PatchCable::addCable(_moduleNum, 0, 0, _moduleNum, 1, 0);
+			PatchCable::addCable(_moduleNum, 1, 0, _moduleNum, 2, 0);
+			break;
+		}
+		case FILTER_MODULE: {
+			componentSets[0].init(PASS_THROUGH_COMPONENT); // audio in
+			componentSets[1].init(PASS_THROUGH_COMPONENT); // cv in
+			componentSets[2].init(FILTER_COMPONENT); // filter
+			componentSets[3].init(PASS_THROUGH_COMPONENT); // audio out
+			PatchCable::addCable(_moduleNum, 0, 0, _moduleNum, 2, 0);
+			PatchCable::addCable(_moduleNum, 1, 0, _moduleNum, 2, 1);
+			PatchCable::addCable(_moduleNum, 2, 0, _moduleNum, 3, 0);
+			break;
+		}
 	}
 }
 

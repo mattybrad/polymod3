@@ -23,11 +23,17 @@ bool setup(BelaContext *context, void *userData)
 		if(i==0) Module::modules[i].init(MAIN_MODULE, i);
 		else if(i==1) Module::modules[i].init(SINE_MODULE, i);
 		else if(i==2) Module::modules[i].init(VCA_MODULE, i);
+		else if(i==3) Module::modules[i].init(ADSR_MODULE, i);
+		else if(i==4) Module::modules[i].init(FILTER_MODULE, i);
+		else if(i==5) Module::modules[i].init(LFO_MODULE, i);
 	}
-	PatchCable::addCable(0,4,0,2,1,0); // midi gate to vca
+	PatchCable::addCable(0,4,0,3,0,0); // midi gate to ADSR
+	PatchCable::addCable(3,2,0,2,1,0); // ADSR to vca
 	PatchCable::addCable(0,3,0,1,0,0); // midi pitch to sine cv
 	PatchCable::addCable(1,2,0,2,0,0); // connect sine to vca
-	PatchCable::addCable(2,3,0,0,0,0); // connect vca to main out
+	PatchCable::addCable(2,3,0,4,0,0); // connect vca to filter
+	PatchCable::addCable(4,3,0,0,0,0); // filter to main out
+	PatchCable::addCable(5,2,0,4,1,0); // lfo to filter
 
 	return true;
 }
