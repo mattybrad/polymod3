@@ -11,8 +11,8 @@ Component::Component() {
 void Component::init(int id) {
   _id = id;
 
-  _envelope.setAttackRate(0.001f * Module::belaContext->audioSampleRate);
-	_envelope.setDecayRate(0.1f * Module::belaContext->audioSampleRate);
+  _envelope.setAttackRate(0.3f * Module::belaContext->audioSampleRate);
+	_envelope.setDecayRate(1.0f * Module::belaContext->audioSampleRate);
 	_envelope.setReleaseRate(2.5f * Module::belaContext->audioSampleRate);
 	_envelope.setSustainLevel(0.2f);
 
@@ -20,7 +20,7 @@ void Component::init(int id) {
 			.fs = Module::belaContext->audioSampleRate,
 			.cutoff = 1000.0f,
 			.type = Biquad::lowpass,
-			.q = 2.0f,
+			.q = 5.0f,
 			.peakGainDb = 0,
 			};
 	_filter.setup(settings);
@@ -46,8 +46,7 @@ void Component::update(int n) {
     case LFO_COMPONENT: {
       float inverseSampleRate = 1.0 / Module::belaContext->audioSampleRate;
       _frequency = 1.0f;
-      //_phase += 2.0f * (float)M_PI * inverseSampleRate * _frequency  * (inputs[0] + 1.0f) * 0.01; // todo: add cv input like sine component
-      _phase += 2.0f * (float)M_PI * inverseSampleRate * _frequency;
+      _phase += 2.0f * (float)M_PI * inverseSampleRate * _frequency  * (inputs[0] + 1.0f) * 0.01; // todo: add cv input like sine component
       if(_phase > M_PI)
       _phase -= 2.0f * (float)M_PI;
       else if(_phase < -M_PI)
@@ -70,11 +69,10 @@ void Component::update(int n) {
     case ADSR_COMPONENT: {
       _envelope.gate(inputs[0]>0.1);
       outputs[0] = _envelope.process();
-      //if(n==0) rt_printf("adsr: %f\n", outputs[0]);
       break;
     }
     case FILTER_COMPONENT: {
-      if(n==0) _filter.setFc(500.0f+(inputs[1]+1.0)*2000.0f);
+      if(n==0) _filter.setFc(10.0f+(inputs[1]+1.0)*1000.0f); // temporary CV-cutoff mapping
       outputs[0] = _filter.process(inputs[0]);
       break;
     }

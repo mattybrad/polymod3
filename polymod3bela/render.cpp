@@ -33,7 +33,9 @@ bool setup(BelaContext *context, void *userData)
 	PatchCable::addCable(1,2,0,2,0,0); // connect sine to vca
 	PatchCable::addCable(2,3,0,4,0,0); // connect vca to filter
 	PatchCable::addCable(4,3,0,0,0,0); // filter to main out
-	PatchCable::addCable(5,2,0,4,1,0); // lfo to filter
+	//PatchCable::addCable(5,2,0,4,1,0); // lfo to filter
+	PatchCable::addCable(3,2,0,4,1,0); // ADSR to filter
+	//PatchCable::addCable(1,2,0,4,0,0); // sine to filter
 
 	return true;
 }
@@ -59,6 +61,28 @@ int findMidiPolyChannelWithNote(int noteNum) {
 	}
 	return bestChannel;
 }
+
+/*void resetSet(int moduleNum, int setNum) {
+	Module::modules[moduleNum].componentSets[setNum].checkNum = 0;
+	Module::modules[moduleNum].componentSets[setNum].poly = false;
+	Module::modules[moduleNum].componentSets[setNum].confirmed = false;
+	for(int i=0; i<MAX_COMPONENT_INPUTS; i++) {
+		//if(Module::modules[moduleNum].componentSets[setNum].inputs[0].confirmed) resetSet()
+	}
+}
+
+void calculatePolyStatus() {
+	int checkNum = 0;
+	resetSet(0, 0); // start at main module input set
+	while(checkNum<2) {
+		checkSet(0, 0);
+		checkNum ++;
+	}
+}
+
+void checkSet(int moduleNum, int setNum) {
+
+}*/
 
 void render(BelaContext *context, void *userData)
 {

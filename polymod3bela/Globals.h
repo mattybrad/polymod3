@@ -2,7 +2,7 @@
 
 #pragma once
 
-#define MAX_POLYPHONY 5
+#define MAX_POLYPHONY 6
 #define MAX_MODULES 8
 #define MAX_PATCH_CABLES 100
 #define MAX_MODULE_INPUTS 4
