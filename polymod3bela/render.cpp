@@ -2,11 +2,14 @@
 #include <Bela.h>
 #include <libraries/Midi/Midi.h>
 #include <cmath>
+#include "MidiPolyChannel.h"
 #include "Module.h"
 #include "PatchCable.h"
 
 Midi gMidi;
 const char* gMidiPort = "hw:0,0,0";
+MidiPolyChannel midiPolyChannels[MAX_POLYPHONY];
+unsigned long timeElapsed = 0; // could make into unsigned long long, currently will roll over at ~27 hours? measure in samples
 
 bool setup(BelaContext *context, void *userData)
 {
@@ -29,7 +32,28 @@ bool setup(BelaContext *context, void *userData)
 	return true;
 }
 
-int nextPolyChannel = 0;
+int findMidiPolyChannel() {
+	int bestChannel = 0;
+	unsigned long bestTime = ULONG_MAX;
+	for(int i=0; i<MAX_POLYPHONY; i++) {
+		if(midiPolyChannels[i].lastChange < bestTime) {
+			bestChannel = i;
+			bestTime = midiPolyChannels[i].lastChange;
+		}
+	}
+	return bestChannel;
+}
+
+int findMidiPolyChannelWithNote(int noteNum) {
+	int bestChannel = 0;
+	for(int i=0; i<MAX_POLYPHONY; i++) {
+		if(midiPolyChannels[i].noteNum == noteNum && midiPolyChannels[i].isDown) {
+			bestChannel = i;
+		}
+	}
+	return bestChannel;
+}
+
 void render(BelaContext *context, void *userData)
 {
 	while(gMidi.getParser()->numAvailableMessages()>0) {
@@ -37,13 +61,20 @@ void render(BelaContext *context, void *userData)
 		message = gMidi.getParser()->getNextChannelMessage();
 		if(message.getType() == kmmNoteOn) {
 			int noteNum = message.getDataByte(0);
-			//float midiFreq = powf(2.0, (noteNum - 69)/12.0) * 440.0;
+			int thisChannelNum = findMidiPolyChannel();
+			midiPolyChannels[thisChannelNum].noteNum = noteNum;
+			midiPolyChannels[thisChannelNum].isDown = true;
+			midiPolyChannels[thisChannelNum].lastChange = timeElapsed;
 			float tempCV = (noteNum-60)/12.0;
-			Module::modules[0].componentSets[1].components[nextPolyChannel].outputs[0] = tempCV;
-			Module::modules[0].componentSets[2].components[nextPolyChannel].outputs[0] = 1.0f;
-			nextPolyChannel ++;
-			if(nextPolyChannel == MAX_POLYPHONY) nextPolyChannel = 0;
-			//rt_printf("note on: %i %f\n", noteNum, midiFreq);
+			Module::modules[0].componentSets[1].components[thisChannelNum].outputs[0] = tempCV;
+			Module::modules[0].componentSets[2].components[thisChannelNum].outputs[0] = 1.0f;
+		}
+		if(message.getType() == kmmNoteOff) {
+			int noteNum = message.getDataByte(0);
+			int thisChannelNum = findMidiPolyChannelWithNote(noteNum);
+			midiPolyChannels[thisChannelNum].isDown = false;
+			midiPolyChannels[thisChannelNum].lastChange = timeElapsed;
+			Module::modules[0].componentSets[2].components[thisChannelNum].outputs[0] = 0.0f;
 		}
 	}
 	for(unsigned int n = 0; n < context->audioFrames; n++) {
@@ -52,6 +83,7 @@ void render(BelaContext *context, void *userData)
 		for(int i=0; i<MAX_MODULES; i++) {
 			Module::modules[i].update(n);
 		}
+		timeElapsed ++; // maybe a dumb way of doing this?
 	}
 }
 
