@@ -16,8 +16,9 @@ void MainModule::init() {
 void MainModule::update(unsigned int n) {
   float out = 0.0;
   for(int i=0; i<MAX_POLYPHONY; i++) {
-    out += 0.01f * _mainInputSet.components[i]->inputs[0];
+    out += _mainInputSet.components[i]->inputs[0];
   }
+  out = 0.01f * out;
   for(unsigned int channel = 0; channel < Module::belaContext->audioOutChannels; channel++) {
     audioWrite(Module::belaContext, n, channel, out);
   }

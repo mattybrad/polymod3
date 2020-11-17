@@ -7,14 +7,18 @@
 #include "PatchCable.h"
 #include "modules/MainModule.h"
 #include "modules/OscillatorModule.h"
+#include "modules/EnvelopeModule.h"
+#include "modules/AmplifierModule.h"
+#include "modules/LfoModule.h"
+#include "modules/FilterModule.h"
 
 // define modules
 MainModule m_main;
 OscillatorModule m_osc;
-//EnvelopeModule m_env;
-//AmplifierModule m_amp;
-//LfoModule m_lfo;
-//FilterModule m_filter;
+EnvelopeModule m_env;
+AmplifierModule m_amp;
+LfoModule m_lfo;
+FilterModule m_filter;
 Module *modules[MAX_MODULES];
 PatchCable patchCables[MAX_PATCH_CABLES];
 

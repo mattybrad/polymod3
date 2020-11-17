@@ -1,13 +1,13 @@
-/***** OscillatorComponent.h *****/
+/***** LfoComponent.h *****/
 
 #pragma once
 
 #include <Bela.h>
 #include "Component.h"
 
-class OscillatorComponent: public Component {
+class LfoComponent: public Component {
 	public:
-	OscillatorComponent();
+	LfoComponent();
 	void init();
 	void update(unsigned int n);
 
