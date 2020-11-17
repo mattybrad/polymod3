@@ -4,6 +4,7 @@
 
 #include <Bela.h>
 #include "Module.h"
+#include "components/PassThroughComponent.h"
 
 class MainModule: public Module {
 	public:
@@ -12,4 +13,6 @@ class MainModule: public Module {
 	void update(unsigned int n);
 
 	private:
+	ComponentSet _mainInputSet;
+	PassThroughComponent _mainInput[MAX_POLYPHONY];
 };

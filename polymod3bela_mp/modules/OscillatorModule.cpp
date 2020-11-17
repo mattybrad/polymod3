@@ -14,7 +14,5 @@ void OscillatorModule::init() {
 }
 
 void OscillatorModule::update(unsigned int n) {
-  for(int i=0; i<MAX_POLYPHONY; i++) {
-    _osc[i].update(n);
-  }
+  
 }

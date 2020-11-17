@@ -16,6 +16,7 @@ OscillatorModule m_osc;
 //LfoModule m_lfo;
 //FilterModule m_filter;
 Module *modules[MAX_MODULES];
+PatchCable patchCables[MAX_PATCH_CABLES];
 
 // define MIDI stuff
 Midi gMidi;
@@ -55,7 +56,10 @@ bool setup(BelaContext *context, void *userData)
 	//PatchCable::addCable(5,2,0,4,1,0); // lfo to filter
 
 	// temp testing
-	//PatchCable::addCable(1,0,1,0,0,0); // osc to main
+	patchCables[0].sourceSet = modules[1]->componentSets[0];
+	patchCables[0].sourceOutNum = 0;
+	patchCables[0].destSet = modules[0]->componentSets[0];
+	patchCables[0].destInNum = 0;
 
 	return true;
 }
@@ -106,11 +110,9 @@ void render(BelaContext *context, void *userData)
 		}
 	}
 	for(unsigned int n = 0; n < context->audioFrames; n++) {
-		// update all modules/cables (this is temporary, will eventually be done with a tree)
-		//PatchCable::updateAll();
-		for(int i=0; i<MAX_MODULES; i++) {
-			if(modules[i] != NULL) modules[i]->update(n);
-		}
+		// temp
+		patchCables[0].update(n);
+		m_main.update(n);
 		timeElapsed ++; // maybe a dumb way of doing this?
 	}
 }
