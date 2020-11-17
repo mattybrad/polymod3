@@ -6,10 +6,11 @@
 #include "Module.h"
 #include "PatchCable.h"
 #include "modules/MainModule.h"
+#include "modules/OscillatorModule.h"
 
 // define modules
 MainModule m_main;
-//OscillatorModule m_osc;
+OscillatorModule m_osc;
 //EnvelopeModule m_env;
 //AmplifierModule m_amp;
 //LfoModule m_lfo;
@@ -35,7 +36,7 @@ bool setup(BelaContext *context, void *userData)
 	}
 
 	modules[0] = &m_main;
-	//modules[1] = m_osc;
+	modules[1] = &m_osc;
 	//modules[2] = m_env;
 	//modules[3] = m_amp;
 	//modules[4] = m_lfo;

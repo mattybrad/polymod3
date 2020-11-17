@@ -10,6 +10,6 @@ void Component::init() {
 
 }
 
-void Component::update(int n) {
+void Component::update(unsigned int n) {
 
 }

@@ -9,7 +9,7 @@ class Component {
 	public:
 	Component();
 	virtual void init();
-	virtual void update(int n);
+	virtual void update(unsigned int n);
 	float inputs[MAX_COMPONENT_INPUTS];
 	float outputs[MAX_COMPONENT_OUTPUTS];
 
