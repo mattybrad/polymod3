@@ -1,0 +1,16 @@
+17/11
+Have got polyphonic modules working, but current structure (where I tried not to use any pointers at all as an overreaction to the previous version having memory allocation issues) is too inefficient. With careful use of pointers and initial declarations(?) of all needed modules/components, could make things tidier and leaner.
+
+Next version should also implement the tree structure I used in the JS version, which decides the mono/poly status of each module/component.
+
+Have designed a benchmark patch to measure performance as I attempt to improve the code. Benchmark settings are polyphony=6, audio rate=44100, block size=16. Benchmark patch is:
+
+Main MIDI CV to oscillator CV
+Main MIDI gate to ADSR gate
+Oscillator to VCA audio
+ADSR to VCA CV
+VCA to filter audio
+LFO to filter CV
+Filter to main audio
+
+17/11 AM setup uses 81% CPU

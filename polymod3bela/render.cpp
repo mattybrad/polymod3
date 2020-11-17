@@ -30,12 +30,10 @@ bool setup(BelaContext *context, void *userData)
 	PatchCable::addCable(0,4,0,3,0,0); // midi gate to ADSR
 	PatchCable::addCable(3,2,0,2,1,0); // ADSR to vca
 	PatchCable::addCable(0,3,0,1,0,0); // midi pitch to sine cv
-	PatchCable::addCable(1,2,0,2,0,0); // connect sine to vca
-	PatchCable::addCable(2,3,0,4,0,0); // connect vca to filter
+	PatchCable::addCable(1,2,0,2,0,0); // sine to vca
+	PatchCable::addCable(2,3,0,4,0,0); // vca to filter
 	PatchCable::addCable(4,3,0,0,0,0); // filter to main out
-	//PatchCable::addCable(5,2,0,4,1,0); // lfo to filter
-	PatchCable::addCable(3,2,0,4,1,0); // ADSR to filter
-	//PatchCable::addCable(1,2,0,4,0,0); // sine to filter
+	PatchCable::addCable(5,2,0,4,1,0); // lfo to filter
 
 	return true;
 }
