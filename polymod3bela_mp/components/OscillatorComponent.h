@@ -7,12 +7,12 @@
 
 class OscillatorComponent: public Component {
 	public:
-	OscillatorComponent();
-	void init();
-	void update(unsigned int n);
+		OscillatorComponent();
+		void init();
+		void update(unsigned int n);
 
 	private:
-	float _phase = 0.0;
-	float _multiplier;
-	float _twoPi;
+		float _phase = 0.0;
+		float _multiplier;
+		float _twoPi;
 };

@@ -21,6 +21,6 @@ void OscillatorComponent::update(unsigned int n) {
   _phase += _multiplier * newFreq;
   if(_phase > M_PI) _phase -= _twoPi;
   else if(_phase < -M_PI) _phase += _twoPi;
-  outputs[0] = sinf_neon(_phase);
-  //outputs[0] = _phase > 0 ? 1.0f : -1.0f; // square temporarily to get more harmonics for filter test
+  //outputs[0] = sinf_neon(_phase);
+  outputs[0] = _phase > 0 ? 1.0f : -1.0f; // square temporarily to get more harmonics for filter test
 }
