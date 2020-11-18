@@ -14,3 +14,5 @@ LFO to filter CV
 Filter to main audio
 
 17/11 AM setup uses 81% CPU
+
+Rewrote code using pointers, and using individual module and component files. Everything was going pretty well, but then started hitting weird segmentation faults when trying to change a simple line of code in the oscillator. Could be something to do with the way the patch cables update the components - current temporary method probably runs a component's update function more than once. I'm not using any "new" commands, and all modules and components are declared at the start of render.cpp, so it's a bit weird that I'm getting segfaults..? Maybe I also need to do a better job initializing all pointers as null and checking that pointers are non-null before doing stuff with them. Everything a bit rough and ready at the moment.
