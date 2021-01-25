@@ -12,6 +12,11 @@ AudioConnection          patchCord2(sine1, 0, i2s1, 1);
 AudioControlSGTL5000     sgtl5000_1;     //xy=429,471
 // GUItool: end automatically generated code
 
+#include "Socket.h"
+
+Socket inputSockets[32];
+Socket outputSockets[32];
+
 const byte OUT_LATCH_PIN = 17;
 const byte OUT_CLOCK_PIN = 16;
 const byte OUT_DATA_PIN = 22;
@@ -87,7 +92,7 @@ void loop() {
       for(c=0; c<8; c++) {
         bool bitVal = digitalRead(IN_DATA_PIN);
         byte inputReadingNum = 8*m + c;
-        bitWrite(inputReading[inputReadingNum], b, bitVal);
+        bitWrite(inputReadings[inputReadingNum], b, bitVal);
         digitalWrite(IN_CLOCK_PIN, HIGH);
         delayMicroseconds(5);
         digitalWrite(IN_CLOCK_PIN, LOW);
