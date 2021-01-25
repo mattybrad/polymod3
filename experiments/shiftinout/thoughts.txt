@@ -1,0 +1,20 @@
+just some late night thoughts now that patch connections are working with just shift registers
+
+rpi synth might be something like:
+32 outputs = 4 shiftouts
+32 inputs = 4 shiftins
+32 knobs = 4 muxes + ADC
+16 buttons = another 2 shiftins
+32 leds = another 4 shiftouts
+
+totally reasonable circuit, could even double everything
+
+future version, modular, module contains:
+8 outputs (shiftout)
+8 inputs (shiftin)
+8 ana/button (mux)
+8 led (shiftout)
+some sort of module id
+can shift registers be chained when physically that far apart?
+basically non-modular (but patchable) design is way easier for now
+
