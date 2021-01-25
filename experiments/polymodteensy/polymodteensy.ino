@@ -26,9 +26,10 @@ const byte IN_CLOCK_PIN = 10;
 const byte IN_DATA_PIN = 11;
 const byte MUX_ADDRESS_PINS[3] = {12,13,14};
 const byte MUX_DATA_PIN = 15;
-const byte NUM_SHIFT_REGISTERS = 1;
+const byte NUM_SHIFT_REGISTERS = 2; // number of each type of shift register
 
 void setup() {
+  AudioMemory(50);
   sgtl5000_1.enable();
   sgtl5000_1.volume(0.3);
   sine1.amplitude(0.5);
@@ -68,7 +69,7 @@ void loop() {
       byte multiplexerNum = NUM_SHIFT_REGISTERS - m - 1; // last multiplexer is first
       byte byteToSend = B00000000;
       for(c=0; c<8; c++) {
-        bool bitVal = bitRead(8*multiplexerNum + c, b);
+        bool bitVal = bitRead(8*multiplexerNum + c + 1, b);
         bitWrite(byteToSend, c, bitVal);
       }
       //Serial.print(byteToSend, BIN);
@@ -98,13 +99,18 @@ void loop() {
         digitalWrite(IN_CLOCK_PIN, LOW);
       }
     }
-
-    for(n=0; n<numChannels; n++) {
-      Serial.print(n);
-      Serial.print(": ");
+  }
+  for(n=0; n<numChannels; n++) {
+    inputReadings[n] -= 1;
+    if(inputReadings[n]==255) {
+      //Serial.print(n);
+      //Serial.print(" not connected");
+    } else {
       Serial.print(inputReadings[n]);
+      Serial.print(" connected to ");
+      Serial.print(n);
       Serial.print("\n");
     }
-    delay(1000);
   }
+  delay(500);
 }

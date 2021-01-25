@@ -11,7 +11,7 @@ class Socket {
     
     
   private:
-    AudioStream* 
+    
     
 };
 
