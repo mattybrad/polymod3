@@ -7,10 +7,10 @@ class ModuleMain : public Module {
   public:
     ModuleMain();
     virtual void update();
+    SocketInput audioIn;
   private:
     AudioOutputI2S _i2s;
     AudioMixer4 _mixer;
-    SocketInput _audioIn;
     AudioConnection* _mixerCables[MAX_POLYPHONY];
     AudioConnection* _outputCables[2];
     

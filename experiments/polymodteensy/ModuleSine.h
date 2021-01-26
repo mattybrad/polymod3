@@ -7,9 +7,9 @@ class ModuleSine : public Module {
   public:
     ModuleSine();
     virtual void update();
+    SocketOutput audioOut;
   private:
     AudioSynthWaveformSine _sineOsc[MAX_POLYPHONY];
-    SocketOutput _audioOut;
     AudioConnection* _sineOscCables[MAX_POLYPHONY];
     
 };

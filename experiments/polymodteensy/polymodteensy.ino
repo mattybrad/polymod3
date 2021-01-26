@@ -8,6 +8,7 @@ AudioControlSGTL5000     sgtl5000_1;
 
 #include "ModuleSine.h"
 #include "ModuleMain.h"
+#include "SocketConnection.h"
 
 const byte OUT_LATCH_PIN = 17;
 const byte OUT_CLOCK_PIN = 16;
@@ -22,11 +23,13 @@ const byte NUM_SHIFT_REGISTERS = 2; // number of each type of shift register
 
 ModuleSine moduleSine;
 ModuleMain moduleMain;
+SocketConnection con1;
 
 void setup() {
   AudioMemory(50);
   sgtl5000_1.enable();
   sgtl5000_1.volume(0.3);
+  con1.connect(moduleSine.audioOut, moduleMain.audioIn);
   
   pinMode(OUT_LATCH_PIN, OUTPUT);
   pinMode(OUT_CLOCK_PIN, OUTPUT);
