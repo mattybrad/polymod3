@@ -7,7 +7,7 @@
 class SocketInput {
   public:
     SocketInput();
-    AudioAmplifier amplifiers[MAX_POLYPHONY];   
+    AudioAmplifier amplifiers[MAX_POLYPHONY];
     
   private:
     

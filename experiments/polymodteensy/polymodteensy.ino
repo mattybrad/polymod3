@@ -32,6 +32,7 @@ byte inputReadings[NUM_CHANNELS];
 byte previousInputReadings[NUM_CHANNELS];
 SocketOutput *socketOutputs[NUM_CHANNELS];
 SocketInput *socketInputs[NUM_CHANNELS];
+byte socketInputConnections[NUM_CHANNELS];
 
 void setup() {
   AudioMemory(50);
@@ -41,6 +42,7 @@ void setup() {
   for(byte i=0; i<NUM_CHANNELS; i++) {
     socketOutputs[i] = NULL;
     socketInputs[i] = NULL;
+    socketInputConnections[i] = 255;
   }
   socketOutputs[0] = &moduleSine.audioOut;
   socketInputs[0] = &moduleMain.audioIn;
@@ -60,6 +62,7 @@ void setup() {
 }
 
 bool firstLoop = true;
+byte loopsWithDifference = 0;
 void loop() {
   byte b,m,c,n;
   for(n=0; n<NUM_CHANNELS; n++) {
@@ -69,8 +72,6 @@ void loop() {
   
   for(b=0; b<8; b++) {
     // for each bit (sent/received serially)
-    //Serial.print(b);
-    //Serial.print(" ");
 
     digitalWrite(OUT_LATCH_PIN, LOW);
     for(m=0; m<NUM_SHIFT_REGISTERS; m++) {
@@ -81,13 +82,9 @@ void loop() {
         bool bitVal = bitRead(8*multiplexerNum + c + 1, b);
         bitWrite(byteToSend, c, bitVal);
       }
-      //Serial.print(byteToSend, BIN);
-      //Serial.print(" ");
       shiftOut(OUT_DATA_PIN, OUT_CLOCK_PIN, MSBFIRST, byteToSend);
     }
     digitalWrite(OUT_LATCH_PIN, HIGH);
-    //Serial.print("\n");
-
 
     delayMicroseconds(5); // maybe not needed
     
@@ -112,27 +109,38 @@ void loop() {
   for(n=0; n<NUM_CHANNELS; n++) {
     inputReadings[n] -= 1;
     if(inputReadings[n] != previousInputReadings[n] && !firstLoop) {
-      if(previousInputReadings[n]!=255) {
-        Serial.print("disconnected ");
-        Serial.print(previousInputReadings[n]);
-        Serial.print(" from ");
-        Serial.println(n);
-      }
-      if(inputReadings[n]!=255) {
-        Serial.print("connected ");
-        Serial.print(inputReadings[n]);
-        Serial.print(" to ");
-        Serial.println(n);
-        if(socketOutputs[inputReadings[n]]!=NULL && socketInputs[n]!=NULL) {
-          connections[connectionIndex].connect(*socketOutputs[inputReadings[n]], *socketInputs[n]);
-          connectionIndex ++;
-        } else {
-          Serial.println("INVALID CONNECTION");
+      loopsWithDifference ++;
+      if(loopsWithDifference == 5) {
+        loopsWithDifference = 0;
+        if(previousInputReadings[n]!=255) {
+          Serial.print("disconnected ");
+          Serial.print(previousInputReadings[n]);
+          Serial.print(" from ");
+          Serial.println(n);
+          if(socketOutputs[previousInputReadings[n]]!=NULL && socketInputs[n]!=NULL) {
+            connections[socketInputConnections[n]].disconnect(); // should also check if this is a valid connection to disconnect
+          } else {
+            Serial.println("INVALID DISCONNECTION");
+          }
         }
+        if(inputReadings[n]!=255) {
+          Serial.print("connected ");
+          Serial.print(inputReadings[n]);
+          Serial.print(" to ");
+          Serial.println(n);
+          if(socketOutputs[inputReadings[n]]!=NULL && socketInputs[n]!=NULL) {
+            connections[connectionIndex].connect(*socketOutputs[inputReadings[n]], *socketInputs[n]);
+            socketInputConnections[n] = connectionIndex;
+            connectionIndex ++;
+          } else {
+            Serial.println("INVALID CONNECTION");
+          }
+        }
+        previousInputReadings[n] = inputReadings[n];
       }
-      previousInputReadings[n] = inputReadings[n];
     }
   }
   delayMicroseconds(10); // just to keep things nice
   firstLoop = false;
+  //Serial.println(loopsWithDifference);
 }

@@ -10,6 +10,8 @@ class SocketConnection {
   public:
     SocketConnection();
     void connect(SocketOutput& src, SocketInput& dest);
+    void disconnect();
+    bool inUse = false;
   private:
     AudioConnection* _patchCables[MAX_POLYPHONY];
     
