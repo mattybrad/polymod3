@@ -7,6 +7,7 @@
 AudioControlSGTL5000     sgtl5000_1;
 
 #include "ModuleSine.h"
+#include "ModuleVCO.h"
 #include "ModuleMain.h"
 #include "SocketConnection.h"
 #include "Globals.h"
@@ -24,6 +25,7 @@ const byte NUM_SHIFT_REGISTERS = 2; // number of each type of shift register
 const byte NUM_CHANNELS = 8 * NUM_SHIFT_REGISTERS;
 
 ModuleSine moduleSine;
+ModuleVCO moduleVCO;
 ModuleMain moduleMain;
 SocketConnection connections[MAX_CONNECTIONS];
 byte connectionIndex = 0;
@@ -44,8 +46,10 @@ void setup() {
     socketInputs[i] = NULL;
     socketInputConnections[i] = 255;
   }
-  socketOutputs[0] = &moduleSine.audioOut;
-  socketInputs[0] = &moduleMain.audioIn;
+  socketOutputs[1] = &moduleSine.audioOut;
+  socketOutputs[2] = &moduleVCO.audioOut;
+  //socketInputs[1] = &moduleVCO.freqModIn;
+  socketInputs[2] = &moduleMain.audioIn;
   
   pinMode(OUT_LATCH_PIN, OUTPUT);
   pinMode(OUT_CLOCK_PIN, OUTPUT);
@@ -64,6 +68,8 @@ void setup() {
 bool firstLoop = true;
 byte loopsWithDifference = 0;
 void loop() {
+  moduleVCO.update();
+  
   byte b,m,c,n;
   for(n=0; n<NUM_CHANNELS; n++) {
     inputReadings[n] = B00000000;
@@ -113,9 +119,9 @@ void loop() {
       if(loopsWithDifference == 5) {
         loopsWithDifference = 0;
         if(previousInputReadings[n]!=255) {
-          Serial.print("disconnected ");
+          Serial.print("disconnected output ");
           Serial.print(previousInputReadings[n]);
-          Serial.print(" from ");
+          Serial.print(" from input ");
           Serial.println(n);
           if(socketOutputs[previousInputReadings[n]]!=NULL && socketInputs[n]!=NULL) {
             connections[socketInputConnections[n]].disconnect(); // should also check if this is a valid connection to disconnect
@@ -124,14 +130,15 @@ void loop() {
           }
         }
         if(inputReadings[n]!=255) {
-          Serial.print("connected ");
+          Serial.print("connected output ");
           Serial.print(inputReadings[n]);
-          Serial.print(" to ");
+          Serial.print(" to input ");
           Serial.println(n);
           if(socketOutputs[inputReadings[n]]!=NULL && socketInputs[n]!=NULL) {
             connections[connectionIndex].connect(*socketOutputs[inputReadings[n]], *socketInputs[n]);
             socketInputConnections[n] = connectionIndex;
             connectionIndex ++;
+            if(connectionIndex == MAX_CONNECTIONS) connectionIndex = 0;
           } else {
             Serial.println("INVALID CONNECTION");
           }
@@ -142,5 +149,4 @@ void loop() {
   }
   delayMicroseconds(10); // just to keep things nice
   firstLoop = false;
-  //Serial.println(loopsWithDifference);
 }
