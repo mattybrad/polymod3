@@ -4,18 +4,10 @@
 #include <SD.h>
 #include <SerialFlash.h>
 
-// GUItool: begin automatically generated code
-AudioSynthWaveformSine   sine1;          //xy=285,339
-AudioOutputI2S           i2s1;           //xy=559,331
-AudioConnection          patchCord1(sine1, 0, i2s1, 0);
-AudioConnection          patchCord2(sine1, 0, i2s1, 1);
-AudioControlSGTL5000     sgtl5000_1;     //xy=429,471
-// GUItool: end automatically generated code
+AudioControlSGTL5000     sgtl5000_1;
 
-#include "Socket.h"
-
-Socket inputSockets[32];
-Socket outputSockets[32];
+#include "ModuleSine.h"
+#include "ModuleMain.h"
 
 const byte OUT_LATCH_PIN = 17;
 const byte OUT_CLOCK_PIN = 16;
@@ -28,13 +20,13 @@ const byte MUX_ADDRESS_PINS[3] = {12,13,14};
 const byte MUX_DATA_PIN = 15;
 const byte NUM_SHIFT_REGISTERS = 2; // number of each type of shift register
 
+ModuleSine moduleSine;
+ModuleMain moduleMain;
+
 void setup() {
   AudioMemory(50);
   sgtl5000_1.enable();
   sgtl5000_1.volume(0.3);
-  sine1.amplitude(0.5);
-  sine1.frequency(220.0);
-  
   
   pinMode(OUT_LATCH_PIN, OUTPUT);
   pinMode(OUT_CLOCK_PIN, OUTPUT);
