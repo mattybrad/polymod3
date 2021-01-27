@@ -51,7 +51,7 @@ void setup() {
   }
   socketOutputs[1] = &moduleSine.audioOut;
   socketOutputs[2] = &moduleVCO.audioOut;
-  //socketInputs[1] = &moduleVCO.freqModIn;
+  socketInputs[1] = &moduleVCO.freqModIn;
   socketInputs[2] = &moduleMain.audioIn;
   
   pinMode(OUT_LATCH_PIN, OUTPUT);
