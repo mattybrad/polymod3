@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -24,65 +24,87 @@ F 3 "" H 7900 6500 50  0001 C CNN
 	1    8300 6100
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 10500 3400 2100 1400
+U 60216398
+F0 "Module1" 50
+F1 "Module1.sch" 50
+$EndSheet
 $Comp
-L 74xx:74HC595 U?
-U 1 1 60108BB0
-P 2850 2200
-F 0 "U?" H 2850 2981 50  0000 C CNN
-F 1 "74HC595" H 2850 2890 50  0000 C CNN
-F 2 "" H 2850 2200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 2850 2200 50  0001 C CNN
-	1    2850 2200
+L Connector:DIN-5_180degree J?
+U 1 1 60225E90
+P 12200 2100
+F 0 "J?" H 12200 1825 50  0000 C CNN
+F 1 "DIN-5_180degree" H 12200 1734 50  0000 C CNN
+F 2 "" H 12200 2100 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf" H 12200 2100 50  0001 C CNN
+	1    12200 2100
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HC595 U?
-U 1 1 601095F2
-P 4200 2200
-F 0 "U?" H 4200 2981 50  0000 C CNN
-F 1 "74HC595" H 4200 2890 50  0000 C CNN
-F 2 "" H 4200 2200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 4200 2200 50  0001 C CNN
-	1    4200 2200
-	1    0    0    -1  
-$EndComp
-Text Notes 3100 1100 0    50   ~ 0
-Output shift registers
-$Comp
-L 74xx:74HC595 U?
-U 1 1 6010CD70
-P 2850 4650
-F 0 "U?" H 2850 5431 50  0000 C CNN
-F 1 "74HC595" H 2850 5340 50  0000 C CNN
-F 2 "" H 2850 4650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 2850 4650 50  0001 C CNN
-	1    2850 4650
+L Isolator:6N138 U?
+U 1 1 60226C14
+P 10450 2200
+F 0 "U?" H 10450 2667 50  0000 C CNN
+F 1 "6N138" H 10450 2576 50  0000 C CNN
+F 2 "" H 10740 1900 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub/Collateral/HCPL2731-D.pdf" H 10740 1900 50  0001 C CNN
+	1    10450 2200
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HC595 U?
-U 1 1 6010CD76
-P 4200 4650
-F 0 "U?" H 4200 5431 50  0000 C CNN
-F 1 "74HC595" H 4200 5340 50  0000 C CNN
-F 2 "" H 4200 4650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 4200 4650 50  0001 C CNN
-	1    4200 4650
+L HD44780:HD44780 DIS?
+U 1 1 602278FC
+P 3550 1900
+F 0 "DIS?" H 4080 896 50  0000 L CNN
+F 1 "HD44780" H 4080 805 50  0000 L CNN
+F 2 "16026-16X2" H 3550 1900 50  0001 L BNN
+F 3 "" H 3550 1900 50  0001 L BNN
+F 4 "5V" H 3550 1900 50  0001 L BNN "VOLTAGE"
+F 5 "N/A" H 3550 1900 50  0001 L BNN "MGF#"
+	1    3550 1900
 	1    0    0    -1  
 $EndComp
-Text Notes 3100 3550 0    50   ~ 0
-Input shift registers
 $Comp
-L 4xxx:4051 U?
-U 1 1 6010D122
-P 12050 2400
-F 0 "U?" H 12594 2446 50  0000 L CNN
-F 1 "4051" H 12594 2355 50  0000 L CNN
-F 2 "" H 12050 2400 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf" H 12050 2400 50  0001 C CNN
-	1    12050 2400
+L power:VCC #PWR?
+U 1 1 6023FEF3
+P 8000 7750
+F 0 "#PWR?" H 8000 7600 50  0001 C CNN
+F 1 "VCC" H 8015 7923 50  0000 C CNN
+F 2 "" H 8000 7750 50  0001 C CNN
+F 3 "" H 8000 7750 50  0001 C CNN
+	1    8000 7750
 	1    0    0    -1  
 $EndComp
-Text Notes 11850 1150 0    50   ~ 0
-Analog controls
+NoConn ~ 8000 7400
+NoConn ~ 8450 7400
+NoConn ~ 8600 7400
+NoConn ~ 9400 7000
+NoConn ~ 9400 6900
+NoConn ~ 9400 6800
+NoConn ~ 9400 6700
+NoConn ~ 9400 6600
+NoConn ~ 9400 6500
+NoConn ~ 7200 7100
+NoConn ~ 7200 7000
+NoConn ~ 7200 6900
+NoConn ~ 7200 6800
+NoConn ~ 7200 6700
+NoConn ~ 7200 6550
+NoConn ~ 7200 6450
+Wire Wire Line
+	8000 7750 8150 7750
+Wire Wire Line
+	8150 7750 8150 7400
+$Comp
+L power:GND #PWR?
+U 1 1 60241B6E
+P 8300 7400
+F 0 "#PWR?" H 8300 7150 50  0001 C CNN
+F 1 "GND" H 8305 7227 50  0000 C CNN
+F 2 "" H 8300 7400 50  0001 C CNN
+F 3 "" H 8300 7400 50  0001 C CNN
+	1    8300 7400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
