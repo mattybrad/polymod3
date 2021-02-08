@@ -51,9 +51,9 @@ void setup() {
   }
   socketOutputs[1] = &moduleSine.audioOut;
   socketOutputs[2] = &moduleVCO.audioOut;
-  //socketInputs[1] = &moduleVCO.freqModIn;
+  socketInputs[1] = &moduleVCO.freqModIn;
   socketInputs[2] = &moduleMain.audioIn;
-  
+
   pinMode(OUT_LATCH_PIN, OUTPUT);
   pinMode(OUT_CLOCK_PIN, OUTPUT);
   pinMode(OUT_DATA_PIN, OUTPUT);
@@ -100,13 +100,13 @@ void loop() {
         Serial.println(String("Message, type=") + type + ", data = " + d1 + " " + d2);
     }
   }
-  
+
   byte b,m,c,n;
   for(n=0; n<NUM_CHANNELS; n++) {
     inputReadings[n] = B00000000;
     if(firstLoop) previousInputReadings[n] = B11111111;
   }
-  
+
   for(b=0; b<8; b++) {
     // for each bit (sent/received serially)
 
@@ -124,7 +124,7 @@ void loop() {
     digitalWrite(OUT_LATCH_PIN, HIGH);
 
     delayMicroseconds(5); // maybe not needed
-    
+
     digitalWrite(IN_CLOCK_ENABLE_PIN, HIGH);
     digitalWrite(IN_LOAD_PIN, LOW);
     delayMicroseconds(5);
@@ -180,4 +180,48 @@ void loop() {
   }
   delayMicroseconds(10); // just to keep things nice
   firstLoop = false;
+}
+
+void calculatePolyStatuses() {
+  int checkNum = 0; // number of times the whole tree has been checked(?)
+  resetSocket(moduleMain.audioIn);
+  while(checkNum < 2) {
+    checkSocket(moduleMain.audioIn);
+    checkNum ++;
+  }
+}
+
+void checkSocket(Socket &s) {
+  bool prevConfirmed = s.confirmed;
+  s.checkNum ++;
+  if(s.hardcodedPoly) {
+    s.poly = true;
+    s.confirmed = true;
+  }
+  bool allMono = true;
+  bool allInputsConfirmed = true;
+  for(byte i=0; i<MAX_MODULE_INPUTS; i++) {
+    if(s.inputs[i].checkNum == checkNum) checkSocket(s); // also should check here that input[i] != socket, but not sure how to do that in C++ yet
+    if(s.inputs[i].poly) allMono = false;
+    if(!s.inputs[i].confirmed) allInputsConfirmed = false;
+  }
+  if(!allMono) {
+    s.poly = true;
+    s.confirmed = true;
+  }
+  if(allInputsConfirmed) {
+    s.confirmed = true;
+  }
+  if(!prevConfirmed && s.confirmed) {
+    s.updatePolyRouting();
+  }
+}
+
+void resetSocket(Socket &s) {
+  s.checkNum = 0;
+  s.poly = false;
+  s.confirmed = false;
+  for(byte i=0; i<MAX_MODULE_INPUTS; i++) {
+    if(s.inputs[i].confirmed) resetSocket(s.inputs[i]);
+  }
 }
