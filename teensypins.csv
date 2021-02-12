@@ -1,0 +1,42 @@
+0,MIDI in,,,MIDI in
+1,Out reg clock,,,Out reg clock
+2,Out reg latch,,,Out reg latch
+3,Out reg data out 0,,,Out reg data out 0
+4,Out reg data out 1,,,Out reg data out 1
+5,In reg load,,,In reg load
+6,In reg clock,,,In reg clock
+7,audio data,,,In reg clock enable
+8,audio data,,,In reg data in 0
+9,In reg clock enable,,,In reg data in 1
+10,SD card,,,LED clock
+11,SD card,,,LED latch
+12,SD card,,,LED data out 0
+13,SD card,,,LED data out 1
+14,In reg data in 0,,,Analog select 0
+15,In reg data in 1,,,Analog select 1
+16,LED clock,,,Analog select 2
+17,LED latch,,,Analog data in 0
+18,audio control,,,Analog data in 1
+19,audio control,,,
+20,audio data,,,
+21,audio data,,,
+22,LED data out 0,,,
+23,audio data,,,
+24,LED data out 1,,,
+25,Analog select 0,,,
+26,Analog select 1,,,
+27,Analog select 2,,,
+28,Analog data in 0,,,
+29,Analog data in 1,,,
+30,Misc (little block),,,
+31,Misc (little block),,,
+32,Misc (little block),,,
+33,Misc (big block),,,
+34,Misc (big block),,,
+35,Misc (big block),,,
+36,Misc (big block),,,
+37,Misc (big block),,,
+38,Misc (big block),,,
+39,Misc (big block),,,
+40,Misc (big block),,,
+41,Misc (big block),,,
