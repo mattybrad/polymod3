@@ -5,7 +5,7 @@
     (drawings 4)
     (tracks 0)
     (zones 0)
-    (modules 38)
+    (modules 37)
     (nets 66)
   )
 
@@ -232,7 +232,7 @@
   )
 
   (module Package_SO:SOIC-16_3.9x9.9mm_P1.27mm (layer B.Cu) (tedit 5D9F72B1) (tstamp 60269B44)
-    (at 59 77 270)
+    (at 59 84 270)
     (descr "SOIC, 16 Pin (JEDEC MS-012AC, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_16.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOIC SO")
     (path /60278B90)
@@ -299,7 +299,7 @@
   )
 
   (module Package_SO:SOIC-16_3.9x9.9mm_P1.27mm (layer B.Cu) (tedit 5D9F72B1) (tstamp 60269B18)
-    (at 52 101 180)
+    (at 52 103 180)
     (descr "SOIC, 16 Pin (JEDEC MS-012AC, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_16.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOIC SO")
     (path /60278C00)
@@ -500,7 +500,7 @@
   )
 
   (module Resistor_SMD:R_1206_3216Metric (layer B.Cu) (tedit 5B301BBD) (tstamp 60269A24)
-    (at 60.4 88 180)
+    (at 60.4 95 180)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags resistor)
     (path /60278C06)
@@ -536,7 +536,7 @@
   )
 
   (module Resistor_SMD:R_1206_3216Metric (layer B.Cu) (tedit 5B301BBD) (tstamp 60269A0D)
-    (at 53.4 88 180)
+    (at 53.4 95 180)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags resistor)
     (path /60278C0C)
@@ -572,7 +572,7 @@
   )
 
   (module Resistor_SMD:R_1206_3216Metric (layer B.Cu) (tedit 5B301BBD) (tstamp 602699F6)
-    (at 46.4 88 180)
+    (at 46.4 95 180)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags resistor)
     (path /60278C12)
@@ -608,7 +608,7 @@
   )
 
   (module Resistor_SMD:R_1206_3216Metric (layer B.Cu) (tedit 5B301BBD) (tstamp 602699DF)
-    (at 39.4 88 180)
+    (at 39.4 95 180)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags resistor)
     (path /60278C18)
@@ -1220,7 +1220,7 @@
   )
 
   (module Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical (layer F.Cu) (tedit 5A3D4993) (tstamp 60269A94)
-    (at 60 71 90)
+    (at 60 78 90)
     (descr "Potentiometer, vertical, Alps RK09K Single, http://www.alps.com/prod/info/E/HTML/Potentiometer/RotaryPotentiometers/RK09K/RK09K_list.html")
     (tags "Potentiometer vertical Alps RK09K Single")
     (path /60278B86)
@@ -1267,7 +1267,7 @@
   )
 
   (module Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical (layer F.Cu) (tedit 5A3D4993) (tstamp 60269A78)
-    (at 45 71 90)
+    (at 45 78 90)
     (descr "Potentiometer, vertical, Alps RK09K Single, http://www.alps.com/prod/info/E/HTML/Potentiometer/RotaryPotentiometers/RK09K/RK09K_list.html")
     (tags "Potentiometer vertical Alps RK09K Single")
     (path /60278B80)
@@ -1314,7 +1314,7 @@
   )
 
   (module Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical (layer F.Cu) (tedit 5A3D4993) (tstamp 60269A5C)
-    (at 60 49 90)
+    (at 60 59 90)
     (descr "Potentiometer, vertical, Alps RK09K Single, http://www.alps.com/prod/info/E/HTML/Potentiometer/RotaryPotentiometers/RK09K/RK09K_list.html")
     (tags "Potentiometer vertical Alps RK09K Single")
     (path /60278B7A)
@@ -1361,7 +1361,7 @@
   )
 
   (module Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical (layer F.Cu) (tedit 5A3D4993) (tstamp 60269A40)
-    (at 45 49 90)
+    (at 45 59 90)
     (descr "Potentiometer, vertical, Alps RK09K Single, http://www.alps.com/prod/info/E/HTML/Potentiometer/RotaryPotentiometers/RK09K/RK09K_list.html")
     (tags "Potentiometer vertical Alps RK09K Single")
     (path /60278B74)
@@ -1589,28 +1589,8 @@
     )
   )
 
-  (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 56D1B4CB) (tstamp 602697EE)
-    (at 61 140)
-    (descr "Mounting Hole 3.2mm, no annular, M3")
-    (tags "mounting hole 3.2mm no annular m3")
-    (path /60272F90)
-    (attr virtual)
-    (fp_text reference H3 (at 0 -4.2) (layer F.SilkS)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value MountingHole (at 0 4.2) (layer F.Fab)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text user %R (at 0.3 0) (layer F.Fab)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_circle (center 0 0) (end 3.2 0) (layer Cmts.User) (width 0.15))
-    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
-    (pad 1 np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
-  )
-
   (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 56D1B4CB) (tstamp 602697E6)
-    (at 39 93)
+    (at 61 141)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (path /60272B0C)
@@ -1630,7 +1610,7 @@
   )
 
   (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 56D1B4CB) (tstamp 602697DE)
-    (at 50 54)
+    (at 50 63)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (path /6027190A)
@@ -1650,7 +1630,7 @@
   )
 
   (module LED_THT:LED_D5.0mm (layer F.Cu) (tedit 5995936A) (tstamp 602697D6)
-    (at 59 83)
+    (at 59 91)
     (descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
     (tags "LED diameter 5.0mm 2 pins")
     (path /60278C1E)
@@ -1686,7 +1666,7 @@
   )
 
   (module LED_THT:LED_D5.0mm (layer F.Cu) (tedit 5995936A) (tstamp 602697C4)
-    (at 52 83)
+    (at 52 91)
     (descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
     (tags "LED diameter 5.0mm 2 pins")
     (path /60278C2A)
@@ -1722,7 +1702,7 @@
   )
 
   (module LED_THT:LED_D5.0mm (layer F.Cu) (tedit 5995936A) (tstamp 602697B2)
-    (at 45 83)
+    (at 45 91)
     (descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
     (tags "LED diameter 5.0mm 2 pins")
     (path /60278C24)
@@ -1758,7 +1738,7 @@
   )
 
   (module LED_THT:LED_D5.0mm (layer F.Cu) (tedit 5995936A) (tstamp 602697A0)
-    (at 38 83)
+    (at 38 91)
     (descr "LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf")
     (tags "LED diameter 5.0mm 2 pins")
     (path /60278C30)
@@ -1793,9 +1773,9 @@
     )
   )
 
-  (gr_line (start 35 145) (end 65 145) (layer Dwgs.User) (width 0.15) (tstamp 6026DF43))
-  (gr_line (start 35 35) (end 65 35) (layer Dwgs.User) (width 0.15) (tstamp 6026DF42))
-  (gr_line (start 65 35) (end 65 145) (layer Dwgs.User) (width 0.15))
-  (gr_line (start 35 145) (end 35 35) (layer Dwgs.User) (width 0.15) (tstamp 60269ED4))
+  (gr_line (start 35 45) (end 65 45) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 35 145) (end 35 45) (layer Edge.Cuts) (width 0.05) (tstamp 6026E3F0))
+  (gr_line (start 65 145) (end 35 145) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 65 45) (end 65 145) (layer Edge.Cuts) (width 0.05))
 
 )

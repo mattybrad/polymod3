@@ -36,17 +36,6 @@ F 3 "~" H 2650 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H3
-U 1 1 60272F90
-P 2650 5750
-F 0 "H3" H 2750 5796 50  0000 L CNN
-F 1 "MountingHole" H 2750 5705 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 2650 5750 50  0001 C CNN
-F 3 "~" H 2650 5750 50  0001 C CNN
-	1    2650 5750
-	1    0    0    -1  
-$EndComp
-$Comp
 L 74xx:74HC165 U?
 U 1 1 60278A97
 P 6550 2500

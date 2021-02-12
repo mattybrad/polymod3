@@ -47,17 +47,6 @@ F 3 "~" H 2650 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H4
-U 1 1 6027317A
-P 2650 5950
-F 0 "H4" H 2750 5996 50  0000 L CNN
-F 1 "MountingHole" H 2750 5905 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 2650 5950 50  0001 C CNN
-F 3 "~" H 2650 5950 50  0001 C CNN
-	1    2650 5950
-	1    0    0    -1  
-$EndComp
-$Comp
 L 74xx:74HC165 U?
 U 1 1 60278A97
 P 6550 2500
@@ -126,7 +115,7 @@ AR Path="/602761DE/60278AB4" Ref="R?"  Part="1"
 AR Path="/60278AB4" Ref="R1"  Part="1" 
 F 0 "R1" V 3050 2150 50  0000 C CNN
 F 1 "10k" V 3100 2000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3030 2000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3030 2000 50  0001 C CNN
 F 3 "~" H 3100 2000 50  0001 C CNN
 	1    3100 2000
 	0    1    1    0   
@@ -140,7 +129,7 @@ AR Path="/602761DE/60278ABA" Ref="R?"  Part="1"
 AR Path="/60278ABA" Ref="R2"  Part="1" 
 F 0 "R2" V 3050 2250 50  0000 C CNN
 F 1 "10k" V 3100 2100 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3030 2100 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3030 2100 50  0001 C CNN
 F 3 "~" H 3100 2100 50  0001 C CNN
 	1    3100 2100
 	0    1    1    0   
@@ -154,7 +143,7 @@ AR Path="/602761DE/60278AC0" Ref="R?"  Part="1"
 AR Path="/60278AC0" Ref="R3"  Part="1" 
 F 0 "R3" V 3050 2350 50  0000 C CNN
 F 1 "10k" V 3100 2200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3030 2200 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3030 2200 50  0001 C CNN
 F 3 "~" H 3100 2200 50  0001 C CNN
 	1    3100 2200
 	0    1    1    0   
@@ -168,7 +157,7 @@ AR Path="/602761DE/60278AC6" Ref="R?"  Part="1"
 AR Path="/60278AC6" Ref="R4"  Part="1" 
 F 0 "R4" V 3050 2450 50  0000 C CNN
 F 1 "10k" V 3100 2300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3030 2300 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3030 2300 50  0001 C CNN
 F 3 "~" H 3100 2300 50  0001 C CNN
 	1    3100 2300
 	0    1    1    0   
@@ -182,7 +171,7 @@ AR Path="/602761DE/60278ACC" Ref="R?"  Part="1"
 AR Path="/60278ACC" Ref="R5"  Part="1" 
 F 0 "R5" V 3050 2550 50  0000 C CNN
 F 1 "10k" V 3100 2400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3030 2400 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3030 2400 50  0001 C CNN
 F 3 "~" H 3100 2400 50  0001 C CNN
 	1    3100 2400
 	0    1    1    0   
@@ -196,7 +185,7 @@ AR Path="/602761DE/60278AD2" Ref="R?"  Part="1"
 AR Path="/60278AD2" Ref="R6"  Part="1" 
 F 0 "R6" V 3050 2650 50  0000 C CNN
 F 1 "10k" V 3100 2500 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3030 2500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3030 2500 50  0001 C CNN
 F 3 "~" H 3100 2500 50  0001 C CNN
 	1    3100 2500
 	0    1    1    0   
@@ -210,7 +199,7 @@ AR Path="/602761DE/60278AD8" Ref="R?"  Part="1"
 AR Path="/60278AD8" Ref="R7"  Part="1" 
 F 0 "R7" V 3050 2750 50  0000 C CNN
 F 1 "10k" V 3100 2600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3030 2600 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3030 2600 50  0001 C CNN
 F 3 "~" H 3100 2600 50  0001 C CNN
 	1    3100 2600
 	0    1    1    0   
@@ -224,7 +213,7 @@ AR Path="/602761DE/60278ADE" Ref="R?"  Part="1"
 AR Path="/60278ADE" Ref="R8"  Part="1" 
 F 0 "R8" V 3050 2850 50  0000 C CNN
 F 1 "10k" V 3100 2700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3030 2700 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3030 2700 50  0001 C CNN
 F 3 "~" H 3100 2700 50  0001 C CNN
 	1    3100 2700
 	0    1    1    0   
@@ -298,7 +287,7 @@ AR Path="/602761DE/60278B01" Ref="R?"  Part="1"
 AR Path="/60278B01" Ref="R9"  Part="1" 
 F 0 "R9" V 5200 1900 50  0000 C CNN
 F 1 "47k" V 5250 2050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5180 2050 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5180 2050 50  0001 C CNN
 F 3 "~" H 5250 2050 50  0001 C CNN
 	1    5250 2050
 	0    1    1    0   
@@ -313,7 +302,7 @@ AR Path="/602761DE/60278B08" Ref="R?"  Part="1"
 AR Path="/60278B08" Ref="R10"  Part="1" 
 F 0 "R10" V 5200 2000 50  0000 C CNN
 F 1 "47k" V 5250 2150 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5180 2150 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5180 2150 50  0001 C CNN
 F 3 "~" H 5250 2150 50  0001 C CNN
 	1    5250 2150
 	0    1    1    0   
@@ -328,7 +317,7 @@ AR Path="/602761DE/60278B0F" Ref="R?"  Part="1"
 AR Path="/60278B0F" Ref="R11"  Part="1" 
 F 0 "R11" V 5200 2100 50  0000 C CNN
 F 1 "47k" V 5250 2250 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5180 2250 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5180 2250 50  0001 C CNN
 F 3 "~" H 5250 2250 50  0001 C CNN
 	1    5250 2250
 	0    1    1    0   
@@ -343,7 +332,7 @@ AR Path="/602761DE/60278B16" Ref="R?"  Part="1"
 AR Path="/60278B16" Ref="R12"  Part="1" 
 F 0 "R12" V 5200 2200 50  0000 C CNN
 F 1 "47k" V 5250 2350 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5180 2350 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5180 2350 50  0001 C CNN
 F 3 "~" H 5250 2350 50  0001 C CNN
 	1    5250 2350
 	0    1    1    0   
@@ -358,7 +347,7 @@ AR Path="/602761DE/60278B1D" Ref="R?"  Part="1"
 AR Path="/60278B1D" Ref="R13"  Part="1" 
 F 0 "R13" V 5200 2300 50  0000 C CNN
 F 1 "47k" V 5250 2450 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5180 2450 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5180 2450 50  0001 C CNN
 F 3 "~" H 5250 2450 50  0001 C CNN
 	1    5250 2450
 	0    1    1    0   
@@ -373,7 +362,7 @@ AR Path="/602761DE/60278B24" Ref="R?"  Part="1"
 AR Path="/60278B24" Ref="R14"  Part="1" 
 F 0 "R14" V 5200 2400 50  0000 C CNN
 F 1 "47k" V 5250 2550 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5180 2550 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5180 2550 50  0001 C CNN
 F 3 "~" H 5250 2550 50  0001 C CNN
 	1    5250 2550
 	0    1    1    0   
@@ -388,7 +377,7 @@ AR Path="/602761DE/60278B2B" Ref="R?"  Part="1"
 AR Path="/60278B2B" Ref="R15"  Part="1" 
 F 0 "R15" V 5200 2500 50  0000 C CNN
 F 1 "47k" V 5250 2650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5180 2650 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5180 2650 50  0001 C CNN
 F 3 "~" H 5250 2650 50  0001 C CNN
 	1    5250 2650
 	0    1    1    0   
@@ -403,7 +392,7 @@ AR Path="/602761DE/60278B32" Ref="R?"  Part="1"
 AR Path="/60278B32" Ref="R16"  Part="1" 
 F 0 "R16" V 5200 2600 50  0000 C CNN
 F 1 "47k" V 5250 2750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5180 2750 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5180 2750 50  0001 C CNN
 F 3 "~" H 5250 2750 50  0001 C CNN
 	1    5250 2750
 	0    1    1    0   
@@ -808,7 +797,7 @@ AR Path="/602761DE/60278C06" Ref="R?"  Part="1"
 AR Path="/60278C06" Ref="R20"  Part="1" 
 F 0 "R20" V 9300 2300 50  0000 L CNN
 F 1 "220" V 9350 2100 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9280 2200 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9280 2200 50  0001 C CNN
 F 3 "~" H 9350 2200 50  0001 C CNN
 	1    9350 2200
 	0    1    1    0   
@@ -822,7 +811,7 @@ AR Path="/602761DE/60278C0C" Ref="R?"  Part="1"
 AR Path="/60278C0C" Ref="R19"  Part="1" 
 F 0 "R19" V 9300 2200 50  0000 L CNN
 F 1 "220" V 9350 2000 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9280 2100 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9280 2100 50  0001 C CNN
 F 3 "~" H 9350 2100 50  0001 C CNN
 	1    9350 2100
 	0    1    1    0   
@@ -836,7 +825,7 @@ AR Path="/602761DE/60278C12" Ref="R?"  Part="1"
 AR Path="/60278C12" Ref="R18"  Part="1" 
 F 0 "R18" V 9300 2100 50  0000 L CNN
 F 1 "220" V 9350 1900 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9280 2000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9280 2000 50  0001 C CNN
 F 3 "~" H 9350 2000 50  0001 C CNN
 	1    9350 2000
 	0    1    1    0   
@@ -850,7 +839,7 @@ AR Path="/602761DE/60278C18" Ref="R?"  Part="1"
 AR Path="/60278C18" Ref="R17"  Part="1" 
 F 0 "R17" V 9300 2000 50  0000 L CNN
 F 1 "220" V 9350 1800 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9280 1900 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9280 1900 50  0001 C CNN
 F 3 "~" H 9350 1900 50  0001 C CNN
 	1    9350 1900
 	0    1    1    0   
