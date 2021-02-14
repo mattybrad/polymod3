@@ -36,17 +36,6 @@ F 3 "~" H 2650 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H3
-U 1 1 60272F90
-P 2650 5750
-F 0 "H3" H 2750 5796 50  0000 L CNN
-F 1 "MountingHole" H 2750 5705 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 2650 5750 50  0001 C CNN
-F 3 "~" H 2650 5750 50  0001 C CNN
-	1    2650 5750
-	1    0    0    -1  
-$EndComp
-$Comp
 L 74xx:74HC165 U?
 U 1 1 60278A97
 P 6550 2500
@@ -905,17 +894,6 @@ Wire Wire Line
 Wire Wire Line
 	8800 2950 8800 3000
 Connection ~ 8800 3000
-$Comp
-L Connector_Generic:Conn_02x10_Counter_Clockwise J2
-U 1 1 6027F5D1
-P 4550 5650
-F 0 "J2" V 4646 5062 50  0000 R CNN
-F 1 "Conn_02x10_Counter_Clockwise" V 4555 5062 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 4550 5650 50  0001 C CNN
-F 3 "~" H 4550 5650 50  0001 C CNN
-	1    4550 5650
-	0    -1   -1   0   
-$EndComp
 Text Label 2150 2000 2    50   ~ 0
 OUT_DATA_IN
 Text Label 2150 2200 2    50   ~ 0
@@ -1045,4 +1023,15 @@ F 3 "~" H 2550 3100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Connection ~ 2550 3100
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even J2
+U 1 1 6029A9C2
+P 4550 5650
+F 0 "J2" V 4646 5062 50  0000 R CNN
+F 1 "Conn_02x10_Odd_Even" V 4555 5062 50  0000 R CNN
+F 2 "" H 4550 5650 50  0001 C CNN
+F 3 "~" H 4550 5650 50  0001 C CNN
+	1    4550 5650
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
