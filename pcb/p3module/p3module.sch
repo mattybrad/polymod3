@@ -1029,7 +1029,7 @@ U 1 1 6029A9C2
 P 4550 5650
 F 0 "J2" V 4646 5062 50  0000 R CNN
 F 1 "Conn_02x10_Odd_Even" V 4555 5062 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 4550 5650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 4550 5650 50  0001 C CNN
 F 3 "~" H 4550 5650 50  0001 C CNN
 	1    4550 5650
 	0    -1   -1   0   
