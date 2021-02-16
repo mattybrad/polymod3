@@ -1,0 +1,42 @@
+0,MIDI in,,,MIDI in
+1,Out data,,,Out data
+2,Out clock,,,Out clock
+3,Out latch,,,Out latch
+4,In data,,,In data
+5,In clock,,,In clock
+6,In clock enable,,,In clock enable
+7,audio data,,,In load
+8,audio data,,,LED data
+9,In load,,,LED clock
+10,SD card,,,LED latch
+11,SD card,,,Ana sel 0
+12,SD card,,,Ana sel 1
+13,SD card,,,Ana sel 2
+14,LED data,,,Ana data 0
+15,LED clock,,,Ana data 1
+16,LED latch,,,
+17,,,,
+18,audio control,,,
+19,audio control,,,
+20,audio data,,,
+21,audio data,,,
+22,,,,
+23,audio data,,,
+24,Ana sel 0,,,
+25,Ana sel 1,,,
+26,Ana sel 2,,,
+27,Ana data 0,,,
+28,Ana data 1,,,
+29,,,,
+30,,,,
+31,,,,
+32,,,,
+33,,,,
+34,,,,
+35,,,,
+36,,,,
+37,,,,
+38,,,,
+39,,,,
+40,,,,
+41,,,,
