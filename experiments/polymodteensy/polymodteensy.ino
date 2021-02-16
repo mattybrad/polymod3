@@ -182,7 +182,7 @@ void loop() {
   firstLoop = false;
 }
 
-void calculatePolyStatuses() {
+/*void calculatePolyStatuses() {
   int checkNum = 0; // number of times the whole tree has been checked(?)
   resetSocket(moduleMain.audioIn);
   while(checkNum < 2) {
@@ -224,4 +224,4 @@ void resetSocket(Socket &s) {
   for(byte i=0; i<MAX_MODULE_INPUTS; i++) {
     if(s.inputs[i].confirmed) resetSocket(s.inputs[i]);
   }
-}
+}*/
