@@ -1,4 +1,4 @@
-18731488990238147
+18647818289929986
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -2267,13 +2267,6 @@ SMD 8540
 0
 4
 4
-Buzzer_Beeper
-Speaker_CUI_CMR-1206S-67
-Speaker, 30mW, 300-7000Hz, IP67 face, 12x6x2,25mm, https://www.cuidevices.com/product/resource/cmr-12062s-67.pdf
-speaker CUI
-0
-2
-2
 Calibration_Scale
 Gauge_10mm_Type1_CopperTop
 Gauge, Massstab, 10mm, CopperTop, Type 1,
@@ -6237,13 +6230,6 @@ Grove-1x04
 4
 4
 Connector
-SpringContact_Harwin_S1941-46R
-7.25mm SMT Multi-directional Spring Contact (T+R), https://cdn.harwin.com/pdfs/S1941R.pdf
-spring contact emi emc shield
-0
-1
-1
-Connector
 Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical
 Tag-Connect programming header; http://www.tag-connect.com/Materials/TC2030-IDC.pdf
 tag connect programming header pogo pins
@@ -6267,13 +6253,6 @@ tag connect programming header pogo pins
 Connector
 Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical
 Tag-Connect programming header; http://www.tag-connect.com/Materials/TC2050-IDC-NL%20Datasheet.pdf
-tag connect programming header pogo pins
-0
-10
-10
-Connector
-Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical_with_bottom_clip
-Tag-Connect programming header with bottom courtyard for TC2050-NL Clip board ; https://www.tag-connect.com/wp-content/uploads/bsk-pdf-manager/TC2050-IDC-NL_Datasheet_8.pdf https://www.tag-connect.com/wp-content/uploads/bsk-pdf-manager/TC2050-CLIP_Datasheet_25.pdf
 tag connect programming header pogo pins
 0
 10
@@ -8052,13 +8031,6 @@ SMA THT Female Jack Vertical Bulkhead
 Connector_Coaxial
 SMA_Molex_73251-1153_EdgeMount_Horizontal
 Molex SMA RF Connectors, Edge Mount, (http://www.molex.com/pdm_docs/sd/732511150_sd.pdf)
-sma edge
-0
-11
-2
-Connector_Coaxial
-SMA_Molex_73251-2120_EdgeMount_Horizontal
-Molex SMA RF Connector, Edge Mount, (http://www.molex.com/pdm_docs/sd/732512120_sd.pdf)
 sma edge
 0
 11
@@ -50295,13 +50267,6 @@ NHD-0420H1Z LCD
 16
 16
 Display
-NHD-C0220BiZ
-NHD-C0220BiZ LCD http://www.newhavendisplay.com/specs/NHD-C0220BiZ-FSW-FBW-3V3M.pdf
-NHD-C0220BiZ LCD
-0
-10
-10
-Display
 RC1602A
 http://www.raystar-optronics.com/down.php?ProID=18
 LCD 16x2 Alphanumeric 16pin
@@ -50658,83 +50623,6 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 0
 10
 10
-Eurocad
-Alpha9mmPot
-
-
-0
-5
-3
-Eurocad
-B3W9_1LED
-
-
-0
-6
-6
-Eurocad
-BA56_3DIG_7SEG
-
-
-0
-12
-12
-Eurocad
-DC_JACK
-
-
-0
-3
-3
-Eurocad
-LED3mm
-LED 3mm round vertical
-LED  3mm round vertical
-0
-2
-2
-Eurocad
-LP4OA1PBCT
-
-
-0
-8
-8
-Eurocad
-MIDI_DIN5
-Din 5 (MIDI), Pro Signal P/N PSG03463
-
-0
-5
-5
-Eurocad
-MOUSEBITE1mm
-
-
-0
-0
-0
-Eurocad
-PJ301M-12
-
-
-0
-3
-3
-Eurocad
-RGBLED10mm
-
-
-0
-4
-4
-Eurocad
-TL1105SPF250Q
-
-
-0
-4
-4
 Ferrite_THT
 LairdTech_28C0236-0JW-10
 Ferrite, vertical, LairdTech 28C0236-0JW-10, https://assets.lairdtech.com/home/brandworld/files/28C0236-0JW-10.pdf, JW Miller core https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-ferrite-beads-emi-filters
@@ -51481,13 +51369,6 @@ Fuse
 Fuse_Schurter_UMT250
 Surface Mount Fuse, 3 x 10.1 mm, Time-Lag T, 250 VAC, 125 VDC (https://us.schurter.com/bundles/snceschurter/epim/_ProdPool_/newDS/en/typ_UMT_250.pdf)
 Schurter fuse smd
-0
-2
-2
-Fuse
-Fuse_Schurter_UMZ250
-Surface Mount Fuse with Clip, 4.2 x 11.1 mm, Time-Lag T, 250 VAC, 125 VDC (https://us.schurter.com/bundles/snceschurter/epim/_ProdPool_/newDS/en/typ_UMZ_250.pdf)
-fuse smd mount holder
 0
 2
 2
@@ -52755,13 +52636,6 @@ Inductor_SMD
 L_Taiyo-Yuden_NR-10050_9.8x10.0mm_HandSoldering
 Inductor, Taiyo Yuden, NR series, Taiyo-Yuden_NR-10050, 9.8mmx10.0mm, https://ds.yuden.co.jp/TYCOMPAS/or/specSheet?pn=NR10050T1R3N
 inductor taiyo-yuden nr smd
-0
-2
-2
-Inductor_SMD
-L_TracoPower_TCK-047_5.2x5.8mm
-Inductor, Traco, TCK-047, 5.2x5.8mm, https://www.tracopower.com/products/tck047.pdf
-inductor smd traco
 0
 2
 2
@@ -60830,13 +60704,6 @@ DFN NoLead
 13
 9
 Package_DFN_QFN
-DFN-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm
-DFN, 8 Pin (https://www.st.com/resource/en/datasheet/lm2903.pdf#page=16), generated with kicad-footprint-generator ipc_noLead_generator.py
-DFN NoLead
-0
-10
-9
-Package_DFN_QFN
 DFN-8-1EP_2x2mm_P0.5mm_EP1.05x1.75mm
 DFN8 2x2, 0.5P; CASE 506CN (see ON Semiconductor 506CN.PDF)
 DFN 0.5
@@ -62575,20 +62442,6 @@ QFN NoLead
 Package_DFN_QFN
 QFN-56-1EP_8x8mm_P0.5mm_EP5.6x5.6mm_ThermalVias
 QFN, 56 Pin (http://www.ti.com/lit/ds/symlink/tlc5957.pdf#page=23), generated with kicad-footprint-generator ipc_noLead_generator.py
-QFN NoLead
-0
-99
-57
-Package_DFN_QFN
-QFN-56-1EP_8x8mm_P0.5mm_EP5.9x5.9mm
-QFN, 56 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/00001734B.pdf#page=50), generated with kicad-footprint-generator ipc_noLead_generator.py
-QFN NoLead
-0
-73
-57
-Package_DFN_QFN
-QFN-56-1EP_8x8mm_P0.5mm_EP5.9x5.9mm_ThermalVias
-QFN, 56 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/00001734B.pdf#page=50), generated with kicad-footprint-generator ipc_noLead_generator.py
 QFN NoLead
 0
 99
@@ -67291,27 +67144,6 @@ DSO-20
 20
 20
 Package_SO
-Infineon_PG-DSO-20-85
-Infineon SO package 20pin with exposed pad (https://www.infineon.com/cms/en/product/packages/PG-DSO/PG-DSO-20-85/)
-DSO-20
-0
-31
-21
-Package_SO
-Infineon_PG-DSO-20-85_ThermalVias
-Infineon SO package 20pin with exposed pad (https://www.infineon.com/cms/en/product/packages/PG-DSO/PG-DSO-20-85/)
-DSO-20
-0
-113
-21
-Package_SO
-Infineon_PG-DSO-20-87
-Infineon SO package 20pin without exposed pad (https://www.infineon.com/cms/en/product/packages/PG-DSO/PG-DSO-20-87/)
-DSO-20
-0
-20
-20
-Package_SO
 Infineon_PG-TSDSO-14-22
 Infineon_PG-TSDSO-14-22
 Infineon TSDSO 14-22 
@@ -68957,13 +68789,6 @@ HVSON NoLead
 13
 9
 Package_SON
-Infineon_PG-LSON-8-1
-https://www.infineon.com/cms/en/product/packages/PG-LSON/PG-LSON-8-1/
-PG-LSON-8-1
-0
-17
-9
-Package_SON
 Infineon_PG-TISON-8-2
 Infineon, PG-TISON-8-2, 5x6x1.15mm, 1.27mm Pitch, Exposed Paddle, https://www.infineon.com/cms/en/product/packages/PG-TISON/PG-TISON-8-2/
 tison
@@ -69445,20 +69270,6 @@ HSOF-8-2 [TOLL] power MOSFET (http://www.infineon.com/cms/en/product/packages/PG
 mosfet hsof toll thermal vias
 0
 159
-4
-Package_TO_SOT_SMD
-Infineon_PG-HSOF-8-3
-HSOF-8-3 power MOSFET (http://www.infineon.com/cms/en/product/packages/PG-HSOF/PG-HSOF-8-3/)
-mosfet hsof
-0
-25
-4
-Package_TO_SOT_SMD
-Infineon_PG-HSOF-8-3_ThermalVias
-HSOF-8-3 power MOSFET (http://www.infineon.com/cms/en/product/packages/PG-HSOF/PG-HSOF-8-3/)
-mosfet hsof
-0
-64
 4
 Package_TO_SOT_SMD
 Infineon_PG-TO-220-7Lead_TabPin8
@@ -72828,13 +72639,6 @@ Skyworks
 7
 7
 RF_Antenna
-Abracon_APAES868R8060C16-T
-Abracon RHCP ceramic patch antenna 854-882Mhz, 5dBi
-APAES patch antenna
-0
-1
-1
-RF_Antenna
 Coilcraft_MA5532-AE_RFID
 RFID Transponder Coil
 antenna rfid coilcraft
@@ -72986,7 +72790,7 @@ Quectel_BC66
 GSM NB-IoT module, 15.8x17.7x2mm, https://www.quectel.com/UploadImage/Downlad/Quectel_BC66_Hardware_Design_V1.1.pdf
 GSM NB-IoT Module BC66 M66
 0
-116
+58
 58
 RF_GSM
 SIMCom_SIM800C
@@ -82235,80 +82039,94 @@ varistor SIOV
 0
 2
 2
-drumkidcustom
-CP_Radial_D6.3mm_P2.50mm
-CP, Radial series, Radial, pin pitch=2.50mm, , diameter=6.3mm, Electrolytic Capacitor
-CP Radial series Radial pin pitch 2.50mm  diameter 6.3mm Electrolytic Capacitor
-0
-2
-2
-drumkidcustom
-C_Disc_D3.4mm_W2.1mm_P2.50mm
-C, Disc series, Radial, pin pitch=2.50mm, , diameter*width=3.4*2.1mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf
-C Disc series Radial pin pitch 2.50mm  diameter 3.4mm width 2.1mm Capacitor
-0
-2
-2
-drumkidcustom
-EG1206
-EG1206-1
-Switch
-0
-5
-5
-drumkidcustom
-LED_D5.0mm
-LED, diameter 5.0mm, 2 pins, http://cdn-reichelt.de/documents/datenblatt/A500/LL-504BC2E-009.pdf
-LED diameter 5.0mm 2 pins
-0
-2
-2
-drumkidcustom
+p3mini
 MIDI_DIN5
 Din 5 (MIDI), Pro Signal P/N PSG03463
 
 0
 5
 5
-drumkidcustom
-MountingHole_3.2mm_M3
-Mounting Hole 3.2mm, no annular, M3
-mounting hole 3.2mm no annular m3
-0
-0
-0
-drumkidcustom
+p3mini
 Potentiometer_Alps_RK09K_Single_Vertical
 Potentiometer, vertical, Alps RK09K Single, http://www.alps.com/prod/info/E/HTML/Potentiometer/RotaryPotentiometers/RK09K/RK09K_list.html
 Potentiometer vertical Alps RK09K Single
 0
 3
 3
-drumkidcustom
-R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal
-Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
-Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm
+teensy
+Teensy1.0
+11
+
 0
-2
-2
-drumkidcustom
-SW_PUSH-12mm_Wuerth-430476085716
-SW PUSH 12mm http://katalog.we-online.de/em/datasheet/430476085716.pdf
-tact sw push 12mm
+27
+27
+teensy
+Teensy1.0++
+20
+
 0
-4
-2
-drumkidcustom
-Tayda_3.5mm_stereo_TRS_jack_A-853
+51
+51
+teensy
+Teensy2.0
+11
+
+0
+31
+31
+teensy
+Teensy2.0++
+20
+
+0
+52
+52
+teensy
+Teensy30_31_32_All_Pins
+Teensy 3.0/3.1/3.2 All Pins
+
+0
+54
+54
+teensy
+Teensy30_31_32_LC
 
 
 0
-5
-5
-drumkidcustom
-drumkid_logo
+39
+38
+teensy
+Teensy35_36
 
 
 0
+62
+62
+teensy
+Teensy40
+
+
 0
+44
+44
+teensy
+Teensy40_SMT
+
+
 0
+54
+54
+teensy
+Teensy41
+
+
+0
+67
+67
+teensy
+Teensy_LC
+
+
+0
+39
+39
